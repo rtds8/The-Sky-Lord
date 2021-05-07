@@ -10,8 +10,8 @@ public class CameraManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        FPP.enabled = true;
-        TPP.enabled = false;
+        TPP.enabled = true;
+        FPP.enabled = false;
     }
 
     // Update is called once per frame

@@ -8,7 +8,7 @@ public class SpaceshipMovement : MonoBehaviour
     private float activeForwardSpeed, activaStrafeSpeed, activeHoverSpeed;
     private float forwardAcceleration = 2.5f, strafeAcceleration = 2f, hoverAcceleration = 2f;
 
-    private float lookRateSpeed = 90f;
+    [SerializeField] private float lookRateSpeed = 90f;
     private Vector2 lookInput, screenCenter, mouseDistance;
 
     private float rollInput;
