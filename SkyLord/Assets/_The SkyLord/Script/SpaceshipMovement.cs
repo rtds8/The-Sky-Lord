@@ -63,7 +63,7 @@ public class SpaceshipMovement : MonoBehaviour
         }
 
         //look around
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(1))
         {
             if (cameraManager.FPP.enabled)
                 cameraManager.FPPCamera();

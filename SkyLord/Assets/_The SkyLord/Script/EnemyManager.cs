@@ -16,6 +16,7 @@ public class EnemyManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //At start the first ship is set active
         foreach (GameObject ship in enemyShipList)
             ship.SetActive(false);
         enemyShipList[0].SetActive(true);
@@ -25,6 +26,7 @@ public class EnemyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //when 
         foreach (GameObject ship in enemyShipList)
             if (ship.activeSelf == true)
             {

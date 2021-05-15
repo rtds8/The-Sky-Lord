@@ -24,23 +24,16 @@ public class CameraManager : MonoBehaviour
             FPP.enabled = !FPP.enabled;
             TPP.enabled = !TPP.enabled;
         }
-        if (TPP.enabled)
-        {
-            //TPPCamera();
-        }
-        if (FPP.enabled)
-        {
-            //FPPCamera();
-        }
     }
 
     public void TPPCamera()
     {
         currentRotation.x += Input.GetAxis("Mouse X") * sensitivity;
         currentRotation.y -= Input.GetAxis("Mouse Y") * sensitivity;
-        currentRotation.x = Mathf.Repeat(currentRotation.x, 360);
+        //currentRotation.x = Mathf.Repeat(currentRotation.x, 360);
         //currentRotation.y = Mathf.Repeat(currentRotation.y, 360);
-        currentRotation.y = Mathf.Clamp(currentRotation.y, -45, 45);
+        currentRotation.x = Mathf.Clamp(currentRotation.x, -45, 45);
+        currentRotation.y = Mathf.Clamp(currentRotation.y, -30, 15);
         TPP.transform.localRotation = Quaternion.Euler(currentRotation.y, currentRotation.x, 0);
         //if (Input.GetMouseButtonDown(0))
         //    Cursor.lockState = CursorLockMode.Locked;
@@ -52,7 +45,7 @@ public class CameraManager : MonoBehaviour
         currentRotation.y -= Input.GetAxis("Mouse Y") * sensitivity;
         //currentRotation.x = Mathf.Repeat(currentRotation.x, 360);
         currentRotation.x = Mathf.Clamp(currentRotation.x, -45, 45);
-        currentRotation.y = Mathf.Clamp(currentRotation.y, -45, 45);
+        currentRotation.y = Mathf.Clamp(currentRotation.y, -15, 5);
         FPP.transform.localRotation = Quaternion.Euler(currentRotation.y, currentRotation.x, 0);
        // if (Input.GetMouseButtonDown(0))
           //  Cursor.lockState = CursorLockMode.Locked;
