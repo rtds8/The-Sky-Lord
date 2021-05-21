@@ -6,9 +6,12 @@ public class Move_Projectile : MonoBehaviour
 {
     public float _speed = 2f, _fireRate = 2f;
     [SerializeField] private GameObject m_muzzleFlash, m_hitImpact;
-
+    Vector3 m_startPoint;
+ 
     void Start()
     {
+        m_startPoint = transform.position;
+
         if(m_muzzleFlash != null)
         {
             var muzzleEffect = Instantiate(m_muzzleFlash, transform.position, Quaternion.identity);
@@ -27,7 +30,7 @@ public class Move_Projectile : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if(_speed != 0)
         {
@@ -38,32 +41,47 @@ public class Move_Projectile : MonoBehaviour
         {
             Debug.Log("No Speed!!!!!");
         }
+
+        DestroyProjectile();
+    }
+
+    void DestroyProjectile()
+    {
+        Vector3 currentPos = transform.position;
+        if (Vector3.Distance(m_startPoint, currentPos) > Mathf.Abs(300) && this.gameObject.activeInHierarchy)
+            Destroy(gameObject);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        _speed = 0;
-
-        ContactPoint _contactPoint = collision.contacts[0];
-        Quaternion _rotation = Quaternion.FromToRotation(Vector3.up, _contactPoint.normal);
-        Vector3 _position = _contactPoint.point;
-
-        if(m_hitImpact != null)
+        if (collision.collider.tag != "The Oblivion")
         {
-            var hitEffect = Instantiate(m_hitImpact, _position, _rotation);
+            _speed = 0;
 
-            var hitParticle = hitEffect.GetComponent<ParticleSystem>();
+            ContactPoint _contactPoint = collision.contacts[0];
+            Quaternion _rotation = Quaternion.FromToRotation(Vector3.up, _contactPoint.normal);
+            Vector3 _position = _contactPoint.point;
 
-            if (hitParticle != null)
-                Destroy(hitEffect, hitParticle.main.duration);
-
-            else
+            if (m_hitImpact != null)
             {
-                var hitParticleChild = hitEffect.transform.GetChild(0).GetComponent<ParticleSystem>();
-                Destroy(hitEffect, hitParticleChild.main.duration);
+                var hitEffect = Instantiate(m_hitImpact, _position, _rotation);
+
+                var hitParticle = hitEffect.GetComponent<ParticleSystem>();
+
+                if (hitParticle != null)
+                    Destroy(hitEffect, hitParticle.main.duration);
+
+                else
+                {
+                    var hitParticleChild = hitEffect.transform.GetChild(0).GetComponent<ParticleSystem>();
+                    Destroy(hitEffect, hitParticleChild.main.duration);
+                }
             }
+
+            Destroy(gameObject);
         }
-            
-        Destroy(gameObject);
+
+        else
+            return;      
     }
 }

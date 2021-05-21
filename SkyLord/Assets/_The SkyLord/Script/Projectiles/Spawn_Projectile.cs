@@ -30,7 +30,7 @@ public class Spawn_Projectile : MonoBehaviour
 
         if(m_firePoint != null)
         {
-            projectile = Instantiate(m_toSpawn, m_firePoint.transform.position,Quaternion.identity);
+            projectile = Instantiate(m_toSpawn, m_firePoint.transform.position, m_firePoint.transform.rotation);
         }
 
         else
