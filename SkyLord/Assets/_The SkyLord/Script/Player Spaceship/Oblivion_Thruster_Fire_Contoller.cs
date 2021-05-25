@@ -5,7 +5,7 @@ using UnityEngine;
 public class Oblivion_Thruster_Fire_Contoller : MonoBehaviour
 {
     [SerializeField] Oblivion_Main_Controller m_mainController;
-    [SerializeField] private ParticleSystem m_thrusterFlameLeft, m_thrusterFlameRight, m_warpEffect;
+    [SerializeField] private ParticleSystem m_thrusterFlameLeft, m_thrusterFlameRight, m_warpEffect, m_warpBig;
 
     void Update()
     {
@@ -13,7 +13,8 @@ public class Oblivion_Thruster_Fire_Contoller : MonoBehaviour
         {
             m_thrusterFlameLeft.Play();
             m_thrusterFlameRight.Play();
-            Invoke("Warp", m_mainController.m_timeZeroToMax/2);
+            Invoke("WarpSmall", m_mainController.m_timeZeroToMax/2);
+            Invoke("WarpBig", 0.5f);
         }
 
         else
@@ -28,9 +29,15 @@ public class Oblivion_Thruster_Fire_Contoller : MonoBehaviour
         m_thrusterFlameLeft.Stop();
         m_thrusterFlameRight.Stop();
         m_warpEffect.Stop();
+        m_warpBig.Stop();
     }
 
-    void Warp()
+    void WarpBig()
+    {
+        m_warpBig.Play();
+    }
+
+    void WarpSmall()
     {
         m_warpEffect.Play();
     }

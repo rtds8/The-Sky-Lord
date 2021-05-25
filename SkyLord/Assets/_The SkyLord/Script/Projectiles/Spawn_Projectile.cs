@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Spawn_Projectile : MonoBehaviour
 {
+    [SerializeField] Oblivion_Main_Controller m_mainController;
     [SerializeField] private GameObject m_firePoint;
     [SerializeField] private List<GameObject> m_projectiles = new List<GameObject>();
 
@@ -15,9 +16,9 @@ public class Spawn_Projectile : MonoBehaviour
         m_toSpawn = m_projectiles[0];
     }
 
-    void FixedUpdate()
+    void Update()
     {
-        if (Input.GetKey(KeyCode.Space) && Time.time >= m_recoilTime)
+        if (m_mainController.m_inputController.m_doFire && Time.time >= m_recoilTime)
         {
             m_recoilTime = Time.time + 1 / m_toSpawn.GetComponent<Move_Projectile>()._fireRate;   
             spawnProjectile();

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TPP_Follow_Cam : MonoBehaviour
 {
-    [SerializeField] CameraManager m_cameraManager;
     [SerializeField] Oblivion_Main_Controller m_mainController;
     [SerializeField] private Transform m_playerShip;
     [SerializeField] private float m_distanceDamp;
@@ -21,7 +20,7 @@ public class TPP_Follow_Cam : MonoBehaviour
     {
         Follow();
 
-       /* if (!m_mainController.m_inputController.m_cameraSteer)
+        /*if (!m_mainController.m_inputController.m_cameraSteer)
         {
             //m_cameraManager.CalculateRotation(m_cameraManager._TPP, 0, 0, 0, 0);
             m_myTransform.position = m_playerShip.position + (m_playerShip.rotation * m_defaultDistance);

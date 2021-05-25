@@ -9806,7 +9806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edd4eaf925e9072458fe15e9161a1fc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 110
+  _speed: 200
   _fireRate: 2
   m_muzzleFlash: {fileID: 1914722891259759559, guid: a74dba4e81de09445840f0340ba9b764, type: 3}
   m_hitImpact: {fileID: 4578816068741449259, guid: 6c0b148d63b413d468507c0cc04c86c3, type: 3}

@@ -5,10 +5,10 @@ using DG.Tweening;
 
 public class EnemyMovement : MonoBehaviour
 {
-    [SerializeField] private Transform Player;
+    [SerializeField] internal Transform Player;
     //[SerializeField] private int MoveSpeed = 100;
     [SerializeField] private Vector3 OffsetDist;
-    [SerializeField] private int MinDist;
+    [SerializeField] internal int MinDist;
     private Vector3 randomDirection;
 
     void Start()

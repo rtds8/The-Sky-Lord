@@ -12,13 +12,13 @@ public class Move_Projectile : MonoBehaviour
     {
         m_startPoint = transform.position;
 
-        if(m_muzzleFlash != null)
+        if (m_muzzleFlash != null)
         {
             var muzzleEffect = Instantiate(m_muzzleFlash, transform.position, Quaternion.identity);
             muzzleEffect.transform.forward = gameObject.transform.forward;
 
             var muzzleParticle = muzzleEffect.GetComponent<ParticleSystem>();
-            
+
             if (muzzleParticle != null)
                 Destroy(muzzleEffect, muzzleParticle.main.duration);
 
@@ -48,7 +48,7 @@ public class Move_Projectile : MonoBehaviour
     void DestroyProjectile()
     {
         Vector3 currentPos = transform.position;
-        if (Vector3.Distance(m_startPoint, currentPos) > Mathf.Abs(300) && this.gameObject.activeInHierarchy)
+        if (Vector3.Distance(m_startPoint, currentPos) >= Mathf.Abs(300) && this.gameObject.activeInHierarchy)
             Destroy(gameObject);
     }
 
@@ -82,6 +82,6 @@ public class Move_Projectile : MonoBehaviour
         }
 
         else
-            return;      
+            return;
     }
 }
