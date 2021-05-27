@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Enemy_Fire : MonoBehaviour
 {
-    [SerializeField] EnemyMovement m_enemyMovement;
+    [SerializeField] Enemy_Manager m_enemyManager;
+    [SerializeField] Enemy_Controller m_enemyController;
     [SerializeField] private GameObject m_enemyProjectile;
-    [SerializeField] private int m_Projectile_Quantity = 6;
-    [SerializeField] private float  m_recoilTime = 2f;
+    [SerializeField] private int m_Projectile_Quantity = 4;
     private float m_elapsedTIme = 0f;
 
     List<GameObject> Enemy_Projectile_Pool;
@@ -26,11 +26,14 @@ public class Enemy_Fire : MonoBehaviour
     }
     void Update()
     {
-        if (Vector3.Distance(m_enemyMovement.transform.position, m_enemyMovement.Player.position) < m_enemyMovement.MinDist && Time.time > m_elapsedTIme)
+        if(m_enemyController.m_doFire == true)
         {
-            GenerateEnemyBullet();
-            m_elapsedTIme = Time.time + m_recoilTime;
-        }     
+            if (Vector3.Distance(m_enemyController.transform.position, m_enemyManager.m_playerTransform.position) <= m_enemyController.m_minDistanceForFire && Time.time > m_elapsedTIme)
+            {
+                GenerateEnemyBullet();
+                m_elapsedTIme = Time.time + m_enemyController.m_recoilTime;
+            }
+        }      
     }
 
     private void GenerateEnemyBullet()
@@ -40,8 +43,9 @@ public class Enemy_Fire : MonoBehaviour
             if (!Enemy_Projectile_Pool[i].activeInHierarchy)
             {
                 Enemy_Projectile_Pool[i].transform.position = this.transform.position;
+                Enemy_Projectile_Pool[i].transform.LookAt(m_enemyManager.m_playerTransform);
                 Enemy_Projectile_Pool[i].SetActive(true);
-                Enemy_Projectile_Pool[i].transform.LookAt(m_enemyMovement.Player);
+                m_enemyController.m_hasFired = true;
                 break;
             }
         }

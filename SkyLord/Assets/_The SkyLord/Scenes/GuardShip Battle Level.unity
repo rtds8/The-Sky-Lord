@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 84807073}
   m_Layer: 0
   m_Name: Warp Speed (1)
-  m_TagString: Untagged
+  m_TagString: The Oblivion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5225,7 +5225,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 390172333}
-  - component: {fileID: 390172334}
   - component: {fileID: 390172335}
   m_Layer: 0
   m_Name: GaurdShip 2.2
@@ -5250,21 +5249,6 @@ Transform:
   m_Father: {fileID: 2011722054}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &390172334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 390172332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff0094fd99fd92347a8bf1a2d3639688, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 4044695902614716}
-  OffsetDist: {x: 350, y: 350, z: 350}
-  MinDist: 250
 --- !u!54 &390172335
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5628,7 +5612,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 703352935}
-  - component: {fileID: 703352936}
   - component: {fileID: 703352937}
   m_Layer: 0
   m_Name: GaurdShip 1.3
@@ -5654,21 +5637,6 @@ Transform:
   m_Father: {fileID: 1895416837}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &703352936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 703352934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff0094fd99fd92347a8bf1a2d3639688, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 4044695902614716}
-  OffsetDist: {x: 300, y: 300, z: 300}
-  MinDist: 250
 --- !u!54 &703352937
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5694,7 +5662,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 713683132}
-  - component: {fileID: 713683133}
   - component: {fileID: 713683134}
   m_Layer: 0
   m_Name: GaurdShip 2.3
@@ -5719,21 +5686,6 @@ Transform:
   m_Father: {fileID: 2011722054}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &713683133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 713683131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff0094fd99fd92347a8bf1a2d3639688, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 4044695902614716}
-  OffsetDist: {x: 350, y: 350, z: 350}
-  MinDist: 250
 --- !u!54 &713683134
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5762,7 +5714,7 @@ GameObject:
   - component: {fileID: 724347474}
   m_Layer: 0
   m_Name: Fire Point
-  m_TagString: Untagged
+  m_TagString: The Oblivion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5907,7 +5859,7 @@ GameObject:
   - component: {fileID: 743319881}
   m_Layer: 0
   m_Name: Laser
-  m_TagString: Untagged
+  m_TagString: Guard Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6418,7 +6370,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1074364627}
-  - component: {fileID: 1074364628}
   - component: {fileID: 1074364629}
   m_Layer: 0
   m_Name: GaurdShip 1.2
@@ -6444,21 +6395,6 @@ Transform:
   m_Father: {fileID: 1895416837}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &1074364628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1074364626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff0094fd99fd92347a8bf1a2d3639688, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 4044695902614716}
-  OffsetDist: {x: 300, y: 300, z: 300}
-  MinDist: 250
 --- !u!54 &1074364629
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6675,7 +6611,7 @@ GameObject:
   - component: {fileID: 1185000767}
   m_Layer: 0
   m_Name: Fire Point
-  m_TagString: Untagged
+  m_TagString: Guard Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6706,10 +6642,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40503b9da64b9de4ab76ec4a21ae6698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_enemyMovement: {fileID: 1532304133}
+  m_enemyManager: {fileID: 1264461751}
+  m_enemyController: {fileID: 1532304133}
   m_enemyProjectile: {fileID: 112339887406800560, guid: cc172fda65a415a4eaeb5b5a797f700d, type: 3}
-  m_Projectile_Quantity: 6
-  m_recoilTime: 2
+  m_Projectile_Quantity: 4
 --- !u!1 &1195242114
 GameObject:
   m_ObjectHideFlags: 0
@@ -6724,7 +6660,7 @@ GameObject:
   - component: {fileID: 1195242116}
   m_Layer: 0
   m_Name: Spaceship_Base
-  m_TagString: Untagged
+  m_TagString: Guard Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7012,7 +6948,7 @@ GameObject:
   - component: {fileID: 1216009847}
   m_Layer: 0
   m_Name: Laser (1)
-  m_TagString: Untagged
+  m_TagString: Guard Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7217,7 +7153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb9b0a4c23dd5848bdcfe8eb950c7c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 4044695902614716}
+  m_playerTransform: {fileID: 4044695902614716}
   enemyShipList:
   - {fileID: 1532304132}
   - {fileID: 1074364626}
@@ -7433,7 +7369,7 @@ GameObject:
   - component: {fileID: 1378576157}
   m_Layer: 0
   m_Name: Thruster Flames-R
-  m_TagString: Untagged
+  m_TagString: Guard Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7765,7 +7701,7 @@ GameObject:
   - component: {fileID: 1532304133}
   m_Layer: 0
   m_Name: GaurdShip 1.1 (1)
-  m_TagString: Untagged
+  m_TagString: Guard Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7779,12 +7715,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1532304132}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff0094fd99fd92347a8bf1a2d3639688, type: 3}
+  m_Script: {fileID: 11500000, guid: c939a03e0b5ba694ba7a988d935907e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 4044695902614716}
-  OffsetDist: {x: 300, y: 300, z: 300}
-  MinDist: 300
+  m_enemyManager: {fileID: 1264461751}
+  m_moveSpeed: 20
+  m_recoilTime: 4
+  m_offsetDistance: {x: 100, y: 50, z: 200}
+  m_minDistanceForFire: 300
 --- !u!54 &1532304134
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13154,7 +13092,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1799765828}
-  - component: {fileID: 1799765829}
   - component: {fileID: 1799765830}
   m_Layer: 0
   m_Name: GaurdShip 1.4
@@ -13180,21 +13117,6 @@ Transform:
   m_Father: {fileID: 1895416837}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &1799765829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1799765827}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff0094fd99fd92347a8bf1a2d3639688, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 4044695902614716}
-  OffsetDist: {x: 300, y: 300, z: 300}
-  MinDist: 250
 --- !u!54 &1799765830
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13222,7 +13144,7 @@ GameObject:
   - component: {fileID: 1802194583}
   m_Layer: 0
   m_Name: Thruster Flames-L
-  m_TagString: Untagged
+  m_TagString: Guard Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18386,7 +18308,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1913495117}
-  - component: {fileID: 1913495118}
   - component: {fileID: 1913495119}
   m_Layer: 0
   m_Name: GaurdShip 2.4
@@ -18411,21 +18332,6 @@ Transform:
   m_Father: {fileID: 2011722054}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1913495118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1913495116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff0094fd99fd92347a8bf1a2d3639688, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 4044695902614716}
-  OffsetDist: {x: 350, y: 350, z: 350}
-  MinDist: 250
 --- !u!54 &1913495119
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18454,7 +18360,7 @@ GameObject:
   - component: {fileID: 1936283245}
   m_Layer: 0
   m_Name: Fire Point
-  m_TagString: Untagged
+  m_TagString: Guard Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18485,10 +18391,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40503b9da64b9de4ab76ec4a21ae6698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_enemyMovement: {fileID: 1532304133}
+  m_enemyManager: {fileID: 1264461751}
+  m_enemyController: {fileID: 1532304133}
   m_enemyProjectile: {fileID: 112339887406800560, guid: cc172fda65a415a4eaeb5b5a797f700d, type: 3}
-  m_Projectile_Quantity: 6
-  m_recoilTime: 2
+  m_Projectile_Quantity: 4
 --- !u!1 &1939792653
 GameObject:
   m_ObjectHideFlags: 0
@@ -18598,7 +18504,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1945494812}
-  - component: {fileID: 1945494813}
   - component: {fileID: 1945494814}
   m_Layer: 0
   m_Name: GaurdShip 1.5
@@ -18624,21 +18529,6 @@ Transform:
   m_Father: {fileID: 1895416837}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &1945494813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1945494811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff0094fd99fd92347a8bf1a2d3639688, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 4044695902614716}
-  OffsetDist: {x: 300, y: 300, z: 300}
-  MinDist: 250
 --- !u!54 &1945494814
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -23676,7 +23566,7 @@ GameObject:
   - component: {fileID: 1997328703}
   m_Layer: 0
   m_Name: Fire Point
-  m_TagString: Untagged
+  m_TagString: The Oblivion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25098,7 +24988,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4677497840311178}
   - component: {fileID: 1507687295216244}
-  - component: {fileID: 1507687295216243}
   m_Layer: 0
   m_Name: GaurdShip 1.1
   m_TagString: Untagged
@@ -25106,21 +24995,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &1507687295216243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1507687295216242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff0094fd99fd92347a8bf1a2d3639688, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 4044695902614716}
-  OffsetDist: {x: 300, y: 300, z: 300}
-  MinDist: 300
 --- !u!54 &1507687295216244
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -42644,7 +42518,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5529917333330714448}
-  - component: {fileID: 5524196086383395679}
   - component: {fileID: 5524196086383395680}
   m_Layer: 0
   m_Name: GaurdShip 2.1
@@ -42653,21 +42526,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &5524196086383395679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5524196086383395678}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff0094fd99fd92347a8bf1a2d3639688, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 4044695902614716}
-  OffsetDist: {x: 350, y: 350, z: 350}
-  MinDist: 250
 --- !u!54 &5524196086383395680
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -52751,10 +52609,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40503b9da64b9de4ab76ec4a21ae6698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_enemyMovement: {fileID: 1507687295216243}
+  m_enemyManager: {fileID: 0}
+  m_enemyController: {fileID: 0}
   m_enemyProjectile: {fileID: 112339887406800560, guid: cc172fda65a415a4eaeb5b5a797f700d, type: 3}
   m_Projectile_Quantity: 6
-  m_recoilTime: 2
 --- !u!23 &7177909096257121637
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -52827,10 +52685,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40503b9da64b9de4ab76ec4a21ae6698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_enemyMovement: {fileID: 1507687295216243}
+  m_enemyManager: {fileID: 0}
+  m_enemyController: {fileID: 0}
   m_enemyProjectile: {fileID: 112339887406800560, guid: cc172fda65a415a4eaeb5b5a797f700d, type: 3}
   m_Projectile_Quantity: 6
-  m_recoilTime: 2
 --- !u!33 &7177909096257121642
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -57767,7 +57625,7 @@ GameObject:
   - component: {fileID: 8840456106044479344}
   m_Layer: 0
   m_Name: Warp Speed
-  m_TagString: Untagged
+  m_TagString: The Oblivion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

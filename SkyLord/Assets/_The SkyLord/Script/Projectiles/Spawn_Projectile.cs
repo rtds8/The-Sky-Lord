@@ -32,6 +32,8 @@ public class Spawn_Projectile : MonoBehaviour
         if(m_firePoint != null)
         {
             projectile = Instantiate(m_toSpawn, m_firePoint.transform.position, m_firePoint.transform.rotation);
+            projectile.transform.parent = m_firePoint.transform;
+            projectile.tag = "The Oblivion";
         }
 
         else

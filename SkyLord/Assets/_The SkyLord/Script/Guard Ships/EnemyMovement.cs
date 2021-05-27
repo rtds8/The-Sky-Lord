@@ -5,37 +5,40 @@ using DG.Tweening;
 
 public class EnemyMovement : MonoBehaviour
 {
-    [SerializeField] internal Transform Player;
-    //[SerializeField] private int MoveSpeed = 100;
-    [SerializeField] private Vector3 OffsetDist;
-    [SerializeField] internal int MinDist;
-    private Vector3 randomDirection;
+    [SerializeField] internal Transform m_PlayerTransform;
+    [SerializeField] private float m_moveSpeed = 20f;
+    [SerializeField] private Vector3 m_offsetDistance;
+    [SerializeField] internal float m_minDistance;
+    private Vector3 m_randomDirection;
+
+    private void OnEnable()
+    {
+        Move();
+    }
 
     void Start()
     {
-        StartCoroutine("RandomPosition");
-
-        Move();
+        StartCoroutine(RandomPosition());        
     }
 
     void Update()
     {
-        transform.DOLookAt(Player.position, 2); 
+        transform.DOLookAt(m_PlayerTransform.position, 1); 
     }
 
     private void Move()
     {
-        transform.DOMove((Player.position - OffsetDist), 20, false).OnComplete(() => Move()); 
+        transform.DOMove((m_PlayerTransform.position - m_offsetDistance), m_moveSpeed, false).OnComplete(() => Move()); 
     }
 
     IEnumerator RandomPosition()
     {
         while (true)
         {
-            randomDirection = new Vector3(Random.Range(transform.position.x - 200, transform.position.x + 200),
+            m_randomDirection = new Vector3(Random.Range(transform.position.x - 200, transform.position.x + 200),
                                                 Random.Range(transform.position.y - 100, transform.position.y + 100),
                                                 Random.Range(transform.position.z - 200, transform.position.z + 200));
-            transform.DOMove(randomDirection, 20, false).OnComplete(() => transform.DOLookAt(Player.position, 2));
+            transform.DOMove(m_randomDirection, m_moveSpeed, false).OnComplete(() => transform.DOLookAt(m_PlayerTransform.position, 2));
             yield return new WaitForSeconds(10);
         }
     }
