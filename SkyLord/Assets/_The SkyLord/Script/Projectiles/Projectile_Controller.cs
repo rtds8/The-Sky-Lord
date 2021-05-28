@@ -17,7 +17,7 @@ public class Projectile_Controller : MonoBehaviour
         if (m_speed != 0)
             this.transform.position += this.transform.forward * (m_speed * Time.deltaTime);
 
-        if (Vector3.Distance(m_startPoint, this.transform.position) >= 300f && this.gameObject.activeInHierarchy)
+        if (Vector3.Distance(m_startPoint, this.transform.position) >= 500f && this.gameObject.activeInHierarchy)
             DeactivateBullet();
 
     }

@@ -6,7 +6,7 @@ public class Oblivion_Input_Controller : MonoBehaviour
 {
     [SerializeField] Oblivion_Main_Controller m_mainController;
     internal bool m_accelerate = false, m_brake = false, m_decelerate = false, m_cameraSteer = false, m_switchCam = false, m_doFire = false;
-    internal float m_yawValue = 0f, m_pitchValue = 0f, m_rollValue = 0f;
+    internal float m_strafeValue = 0f, m_yawValue = 0f, m_pitchValue = 0f, m_rollValue = 0f;
 
     void Update()
     {
@@ -24,6 +24,12 @@ public class Oblivion_Input_Controller : MonoBehaviour
 
         else
             m_brake = false;
+
+        if (Input.GetAxis("Horizontal") != 0)
+            m_strafeValue = Input.GetAxis("Horizontal");
+
+        else
+            m_strafeValue = 0f;
 
         if (Input.GetAxis("Mouse X") != 0)
             m_yawValue = Input.GetAxis("Mouse X");

@@ -45,7 +45,6 @@ public class Enemy_Fire : MonoBehaviour
                 Enemy_Projectile_Pool[i].transform.position = this.transform.position;
                 Enemy_Projectile_Pool[i].transform.LookAt(m_enemyManager.m_playerTransform);
                 Enemy_Projectile_Pool[i].SetActive(true);
-                m_enemyController.m_hasFired = true;
                 break;
             }
         }
