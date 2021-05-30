@@ -34,5 +34,5 @@ Material:
     m_Floats:
     - Fresnel_Strength: 3
     m_Colors:
-    - Fresnel_Color: {r: 5.1320763, g: 0.35827684, b: 0.48774737, a: 0}
+    - Fresnel_Color: {r: 0.25, g: 0, b: 0.04901961, a: 0}
   m_BuildTextureStacks: []
