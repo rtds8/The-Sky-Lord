@@ -40,7 +40,8 @@ public class Oblivion_Movement_Controller : MonoBehaviour
 
         if(m_mainController.m_inputController.m_strafeValue != 0)
         {
-            m_mainController.transform.Translate(transform.right * m_mainController.m_inputController.m_strafeValue * (m_mainController.m_maxSpeed/10) * Time.deltaTime);
+            m_mainController.transform.Translate(m_mainController.transform.right * m_mainController.m_inputController.m_strafeValue * (m_mainController.m_maxSpeed/10) * Time.deltaTime, 
+                                                    Space.World);
         }
 
         if (m_mainController.m_inputController.m_brake)

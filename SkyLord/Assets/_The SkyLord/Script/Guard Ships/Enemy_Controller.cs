@@ -16,9 +16,10 @@ public class Enemy_Controller : MonoBehaviour
     {
         m_doFire = false;
         StartCoroutine(MoveToPlayer());
+        InvokeRepeating("Dodge", 5f, 0.2f);
     }
 
-    private void LateUpdate()
+    void FixedUpdate()
     {
         this.transform.LookAt(m_enemyManager.m_playerTransform, m_enemyManager.m_playerTransform.up);
     }
@@ -35,7 +36,17 @@ public class Enemy_Controller : MonoBehaviour
             transform.position += transform.forward * m_moveSpeed * Time.deltaTime;
         }
 
-        else if(currentDistance <= m_dodgeDistance)
+        else
+        {
+            m_doFire = true;
+        }
+
+        StartCoroutine(MoveToPlayer());
+    }
+
+    private void Dodge()
+    {
+        if (Vector3.Distance(this.transform.position, m_enemyManager.m_playerTransform.position) <= m_dodgeDistance)
         {
             m_doFire = false;
 
@@ -45,17 +56,11 @@ public class Enemy_Controller : MonoBehaviour
 
             transform.position = Vector3.Lerp(transform.position, dodgeValue, m_dodgeStrength);
         }
-
-        else
-        {
-            m_doFire = true;
-        }
-
-        StartCoroutine(MoveToPlayer());
     }
 
     private void OnDisable()
     {
+        CancelInvoke("Dodge");
         StopAllCoroutines();
     }
 }

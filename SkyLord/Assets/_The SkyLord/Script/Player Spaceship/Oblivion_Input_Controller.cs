@@ -5,8 +5,14 @@ using UnityEngine;
 public class Oblivion_Input_Controller : MonoBehaviour
 {
     [SerializeField] Oblivion_Main_Controller m_mainController;
+    [SerializeField] private GameObject m_radarPoint;
     internal bool m_accelerate = false, m_brake = false, m_decelerate = false, m_cameraSteer = false, m_switchCam = false, m_doFire = false;
     internal float m_strafeValue = 0f, m_yawValue = 0f, m_pitchValue = 0f, m_rollValue = 0f;
+
+    private void Awake()
+    {
+        m_radarPoint.SetActive(true);
+    }
 
     void Update()
     {
