@@ -5,29 +5,31 @@ using UnityEngine;
 public class CameraManager : MonoBehaviour
 {
     [SerializeField] Oblivion_Main_Controller m_mainController;
-    public Camera _FPP;
-    public Camera _TPP;
+    [SerializeField] private Camera m_FPP, m_TPP;
+    public Camera _activeCam;
     [SerializeField] private float m_sensitivity;
     private Vector3 m_currentRotation;
 
-    void Start()
+
+    void Awake()
     {
-        _TPP.enabled = true;
-        _FPP.enabled = false;
+        m_TPP.enabled = true;
+        m_FPP.enabled = false;
+        _activeCam = m_TPP;
     }
 
     void FixedUpdate()
     {
-        if (_TPP.enabled && m_mainController.m_inputController.m_cameraSteer)
+        if (m_TPP.enabled && m_mainController.m_inputController.m_cameraSteer)
             TPPCamera();
 
         if(m_mainController.m_inputController.m_switchCam)
         {
-            _FPP.enabled = !_FPP.enabled;
-            _TPP.enabled = !_TPP.enabled;
+            m_FPP.enabled = !m_FPP.enabled;
+            m_TPP.enabled = !m_TPP.enabled;
         }
 
-        if (_FPP.enabled && m_mainController.m_inputController.m_cameraSteer)
+        if (m_FPP.enabled && m_mainController.m_inputController.m_cameraSteer)
             FPPCamera();
     }
 
@@ -35,18 +37,24 @@ public class CameraManager : MonoBehaviour
     {
         if (!m_mainController.m_inputController.m_cameraSteer)
         {
-            CalculateRotation(_TPP, 0, 0, 0, 0);
-            CalculateRotation(_FPP, 0, 0, 0, 0);
+            CalculateRotation(m_TPP, 0, 0, 0, 0);
+            CalculateRotation(m_FPP, 0, 0, 0, 0);
         }
+
+        if (m_FPP.enabled)
+            _activeCam = m_FPP;
+
+        else
+            _activeCam = m_TPP;
     }
     public void TPPCamera()
     {
-        CalculateRotation(_TPP, 15, 15, 15, 15);
+        CalculateRotation(m_TPP, 15, 15, 15, 15);
     }
 
     public void FPPCamera()
     {
-        CalculateRotation(_FPP, 45, 45, 10, 20);
+        CalculateRotation(m_FPP, 45, 45, 10, 20);
     }
 
     void CalculateRotation(Camera camera, float neg_x, float pos_x, float neg_y, float pos_y)

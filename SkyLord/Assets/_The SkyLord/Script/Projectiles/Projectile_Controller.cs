@@ -6,10 +6,11 @@ public class Projectile_Controller : MonoBehaviour
 {
     [SerializeField] private float m_speed = 100f;
     private Vector3 m_startPoint;
+
     private void OnEnable()
     {
         m_startPoint = this.transform.position;
-        gameObject.tag = "Guard Ship";
+        gameObject.tag = "Enemy Bullet";
     }
 
     void Update()
@@ -21,6 +22,15 @@ public class Projectile_Controller : MonoBehaviour
             DeactivateBullet();
 
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!other.gameObject.CompareTag("Guard Ship"))
+        {
+            DeactivateBullet();
+        }
+    }
+
     private void DeactivateBullet()
     {
         this.gameObject.SetActive(false);

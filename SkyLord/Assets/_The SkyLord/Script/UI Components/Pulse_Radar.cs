@@ -43,7 +43,7 @@ public class Pulse_Radar : MonoBehaviour
                 if (!m_alreadyHit.Contains(raycast.collider))
                 {
                     m_alreadyHit.Add(raycast.collider);
-                    Instantiate(m_radarPing, raycast.collider.transform.position, m_radarPing.transform.rotation);
+                    Instantiate(m_radarPing, raycast.collider.transform.position, Quaternion.Euler(90f, raycast.collider.transform.eulerAngles.y, 0f));
                 }
 
                 m_radarPing.SetDisappearTime(m_maxRange / rangeSpeed);

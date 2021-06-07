@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Oblivion_Main_Controller : MonoBehaviour
 {
-    [SerializeField] internal float m_maxSpeed = 100f, m_timeZeroToMax = 4f, m_timeMaxToZero = 2f, m_timeBrakeToZero = 1f, m_rotationSpeed = 15f;
+    [SerializeField] internal float m_maxSpeed = 100f, m_timeZeroToMax = 4f, m_timeMaxToZero = 2f, m_timeBrakeToZero = 1f, m_rotationSpeed = 15f, m_health = 500f, m_healTime = 20f;
     [SerializeField] internal Oblivion_Input_Controller m_inputController;
     [SerializeField] internal Oblivion_Movement_Controller m_movementController;
     [SerializeField] internal Oblivion_Thruster_Fire_Contoller m_thrusterController;
+    [SerializeField] internal Oblivion_Damage_And_Health m_damageAndHealth;
  
     internal Rigidbody myRigidBody;
     internal Transform myTransform;

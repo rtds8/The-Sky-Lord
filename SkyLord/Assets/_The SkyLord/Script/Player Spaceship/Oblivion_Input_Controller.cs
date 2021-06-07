@@ -67,10 +67,10 @@ public class Oblivion_Input_Controller : MonoBehaviour
         else
             m_switchCam = false;
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
             m_doFire = true;
 
-        if (Input.GetMouseButtonUp(0))
+        else
             m_doFire = false;
 
         bool isMouseMove = Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0;

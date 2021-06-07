@@ -6,16 +6,18 @@ TagManager:
   tags:
   - The Oblivion
   - Guard Ship
+  - Player Bullet
+  - Enemy Bullet
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Radar
   - Water
   - UI
-  - The Oblivion
-  - Guard Ship
-  - Radar
+  - Player
+  - Enemy
+  - 
   - 
   - 
   - 

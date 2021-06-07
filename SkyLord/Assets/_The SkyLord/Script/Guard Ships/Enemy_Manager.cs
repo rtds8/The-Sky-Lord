@@ -44,7 +44,7 @@ public class Enemy_Manager : MonoBehaviour
         {
             var myDistance = Vector3.Distance(m_playerTransform.position, ship.transform.position);
 
-            if (nearestShipDistance > myDistance)
+            if (nearestShipDistance >= myDistance)
             {
                 nearestShipDistance = myDistance;
                 shipToActivate = ship;
@@ -53,5 +53,17 @@ public class Enemy_Manager : MonoBehaviour
 
         shipToActivate.SetActive(true);
         isAnyShipActive = true;
+    }
+
+    public void RemoveShip(GameObject deactivatedShip)
+    {
+        for(int i = 0; i < enemyShipList.Count; i++)
+        {
+            if(enemyShipList[i] == deactivatedShip)
+            {
+                enemyShipList[i].SetActive(false);
+                enemyShipList.RemoveAt(i);
+            }
+        }
     }
 }
