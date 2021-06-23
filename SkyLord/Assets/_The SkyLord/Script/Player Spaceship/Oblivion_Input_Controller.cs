@@ -12,11 +12,11 @@ public class Oblivion_Input_Controller : MonoBehaviour
     private void Awake()
     {
         m_radarPoint.SetActive(true);
+        LockCursor();
     }
 
     void Update()
     {
-        Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Confined;
 
         if (Input.GetAxis("Vertical") > 0)
@@ -56,10 +56,16 @@ public class Oblivion_Input_Controller : MonoBehaviour
             m_rollValue = 0f;
 
         if (Input.GetMouseButtonDown(1))
+        {
+            LockCursor();
             m_cameraSteer = true;
+        }
 
         if (Input.GetMouseButtonUp(1))
+        {
+            UnlockCursor();
             m_cameraSteer = false;
+        }
 
         if (Input.GetKeyDown(KeyCode.C))
             m_switchCam = true;
@@ -68,7 +74,10 @@ public class Oblivion_Input_Controller : MonoBehaviour
             m_switchCam = false;
 
         if (Input.GetMouseButtonDown(0))
+        {
+            LockCursor();
             m_doFire = true;
+        }
 
         else
             m_doFire = false;
@@ -80,5 +89,17 @@ public class Oblivion_Input_Controller : MonoBehaviour
 
         else
             m_decelerate = false;
+    }
+
+    void LockCursor()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    void UnlockCursor()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 }
