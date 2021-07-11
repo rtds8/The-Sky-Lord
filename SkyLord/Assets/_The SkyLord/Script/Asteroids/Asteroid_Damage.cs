@@ -21,12 +21,19 @@ public class Asteroid_Damage : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player Bullet"))
         {
-            m_currentHealth -= m_damageAmount;
+            DoDamage();
         }      
+    }
+
+    public void DoDamage()
+    {
+        m_currentHealth -= m_damageAmount;
     }
 
     private void RemoveAsteroid()
     {
+        gameObject.GetComponent<Explosion_Effect>().Explode();
+        gameObject.GetComponent<Explosion_Effect>().AddNearbyForce();
         this.gameObject.SetActive(false);
     }
 }

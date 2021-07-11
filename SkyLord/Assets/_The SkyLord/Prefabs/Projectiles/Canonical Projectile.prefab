@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7779137703277461043}
   - component: {fileID: 7779137703277461040}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 7779137703526273882}
   - component: {fileID: 7779137703526273880}
   - component: {fileID: 7779137703526273883}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4953,7 +4953,7 @@ GameObject:
   - component: {fileID: 7779137704438787397}
   - component: {fileID: 7779137704438787387}
   - component: {fileID: 7779137704438787386}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Beam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9757,7 +9757,7 @@ GameObject:
   - component: {fileID: 7779137704764668940}
   - component: {fileID: 436732791}
   - component: {fileID: 913354196246382135}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Canonical Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -5,20 +5,35 @@ using UnityEngine;
 public class Projectile_Controller : MonoBehaviour
 {
     [SerializeField] private float m_speed = 100f;
-    private Vector3 m_startPoint;
+    [SerializeField] private GameObject m_hitEffect;
+    private Vector3 m_startPoint; 
+    bool m_target;
+    private float m_activeTime;
 
     private void OnEnable()
     {
         m_startPoint = this.transform.position;
         gameObject.tag = "Enemy Bullet";
+        m_activeTime = 0f;
+    }
+
+    private void Start()
+    {
+        m_target = transform.GetComponentInParent<Enemy_Fire>().AimAtPlayer();
     }
 
     void Update()
     {
-        if (m_speed != 0)
-            this.transform.position += this.transform.forward * (m_speed * Time.deltaTime);
+        m_activeTime += Time.deltaTime;
 
-        if (Vector3.Distance(m_startPoint, this.transform.position) >= 500f && this.gameObject.activeInHierarchy)
+        
+
+        if (m_speed != 0 && m_target)
+        {
+            this.transform.position += this.transform.forward * (m_speed * Time.deltaTime);
+        }
+
+        if ((Vector3.Distance(m_startPoint, this.transform.position) >= 500f || m_activeTime >= 2f) && this.gameObject.activeInHierarchy)
             DeactivateBullet();
 
     }
@@ -27,6 +42,7 @@ public class Projectile_Controller : MonoBehaviour
     {
         if (!other.gameObject.CompareTag("Guard Ship"))
         {
+            Instantiate(m_hitEffect, other.transform.position, other.transform.rotation);
             DeactivateBullet();
         }
     }

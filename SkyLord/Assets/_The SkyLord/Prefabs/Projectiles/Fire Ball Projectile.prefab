@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 112339887406800561}
   - component: {fileID: 7398975113106914009}
   - component: {fileID: 5111465231586993032}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fire Ball Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,8 +44,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 5}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 1.5}
 --- !u!114 &5111465231586993032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,6 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 100
+  m_hitEffect: {fileID: 4723138397935393739, guid: c63da5fa99e274745b2f7eebe0a4f97e, type: 3}
 --- !u!1 &112339887636571598
 GameObject:
   m_ObjectHideFlags: 0
@@ -70,7 +71,7 @@ GameObject:
   - component: {fileID: 112339887636571599}
   - component: {fileID: 112339887636571597}
   - component: {fileID: 112339887636571596}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fire Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4876,7 +4877,7 @@ GameObject:
   - component: {fileID: 112339888121093605}
   - component: {fileID: 112339888121093603}
   - component: {fileID: 112339888121093602}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Emitting Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9699,7 +9700,7 @@ GameObject:
   - component: {fileID: 112339888136027834}
   - component: {fileID: 112339888136027832}
   - component: {fileID: 112339888136027835}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Emitting Particles Backend
   m_TagString: Untagged
   m_Icon: {fileID: 0}

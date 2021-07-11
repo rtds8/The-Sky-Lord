@@ -49,4 +49,23 @@ public class Enemy_Fire : MonoBehaviour
             }
         }
     }
+
+    public bool AimAtPlayer()
+    {
+        RaycastHit hit;
+        Vector3 direction = m_enemyManager.m_playerTransform.position - this.transform.parent.parent.forward;
+        
+        if (Physics.Raycast(this.transform.position, direction, out hit, m_enemyController.m_minDistanceForFire))
+        {
+            return true;
+        }
+
+        else
+        {
+            if (Physics.Raycast(this.transform.parent.parent.position, direction, out hit, m_enemyController.m_minDistanceForFire))
+                return true;
+        }
+
+        return false;
+    }
 }

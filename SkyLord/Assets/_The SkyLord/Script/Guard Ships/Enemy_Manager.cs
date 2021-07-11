@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy_Manager : MonoBehaviour
 {
     [SerializeField] internal Transform m_playerTransform;
-    [SerializeField] private List<GameObject> enemyShipList;
+    [SerializeField] internal List<GameObject> enemyShipList;
 
     private bool isAnyShipActive = false;
 

@@ -39,7 +39,11 @@ public class Enemy_Controller : MonoBehaviour
     void Update()
     {
         if (m_currentHealth <= 0f)
+        {
+            gameObject.GetComponent<Explosion_Effect>().Explode();
+            m_enemyManager.m_playerTransform.gameObject.GetComponent<Oblivion_Damage_And_Health>().m_playerUI.GetComponentInChildren<Increment_Count_Text>().IncrementCount();
             m_enemyManager.RemoveShip(this.gameObject);
+        }
     }
 
     private IEnumerator MoveToPlayer()

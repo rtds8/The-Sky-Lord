@@ -5,9 +5,9 @@ using UnityEngine;
 public class Oblivion_Damage_And_Health : MonoBehaviour
 {
     [SerializeField] Oblivion_Main_Controller m_mainController;
-    [SerializeField] private Canvas m_healthBar;
-    private bool m_isVulnerable, m_takenDamage;
-    private float m_currentHealth;
+    [SerializeField] internal Canvas m_playerUI;
+    internal bool m_isVulnerable, m_takenDamage;
+    internal float m_currentHealth, m_damageAmount = 10f, m_energyReduceAmount = 10f;
 
     private void OnEnable()
     {
@@ -18,25 +18,41 @@ public class Oblivion_Damage_And_Health : MonoBehaviour
 
     void Start()
     {
-        m_healthBar.GetComponentInChildren<Health_Bar>().SetMaxHealth(m_mainController.m_health);
+        m_playerUI.GetComponentInChildren<Health_Bar>().SetMaxHealth(m_mainController.m_health);
+        m_playerUI.GetComponentInChildren<Energy_Bar>().SetMaxEnergy(m_mainController.m_maxEnergy);
         StartCoroutine(Rejuvinate());
+    }
+
+    void Update()
+    {
+        if(m_mainController.m_inputController.m_accelerate)
+            m_playerUI.GetComponentInChildren<Energy_Bar>().ReduceEnergy(m_energyReduceAmount * 15f * Time.deltaTime);
+
+        if(m_mainController.m_inputController.m_strafeValue != 0)
+            m_playerUI.GetComponentInChildren<Energy_Bar>().ReduceEnergy(m_energyReduceAmount * 10f * Time.deltaTime);
+
+        if (m_mainController.m_inputController.m_doFire)
+            m_playerUI.GetComponentInChildren<Energy_Bar>().ReduceEnergy(m_energyReduceAmount * 20f * Time.deltaTime);
+
+        m_playerUI.GetComponentInChildren<Energy_Bar>().ReduceEnergy(m_energyReduceAmount * 5f * Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Enemy Bullet" && m_isVulnerable && this.gameObject.tag != "Player Bullet")
+        if(other.gameObject.CompareTag("Enemy Bullet") && m_isVulnerable && !(this.gameObject.CompareTag("Player Bullet")))
         {
             m_takenDamage = true;
             m_isVulnerable = false;
         }
 
         DoDamage();
+
+        if(other.gameObject.CompareTag("Collectable"))
+            m_playerUI.GetComponentInChildren<Energy_Bar>().ReduceEnergy(-m_mainController.m_energyIncrement);
     }
 
-    private void DoDamage()
+    internal void DoDamage()
     {
-        var damageAmount = 10f;
-
         if (m_takenDamage)
         {/*
             if (m_currentHealth > 50f)
@@ -44,10 +60,10 @@ public class Oblivion_Damage_And_Health : MonoBehaviour
             else
                 damageAmount = 2.5f;
 */
-            m_healthBar.GetComponentInChildren<Health_Bar>().DecrementHealth(damageAmount);
+            m_playerUI.GetComponentInChildren<Health_Bar>().DecrementHealth(m_damageAmount);
         }
 
-        m_currentHealth -= damageAmount;
+        m_currentHealth -= m_damageAmount;
         m_takenDamage = false;
         m_isVulnerable = true;
     }
@@ -67,7 +83,7 @@ public class Oblivion_Damage_And_Health : MonoBehaviour
 
             else
                 amount = 10f;*/
-            m_healthBar.GetComponentInChildren<Health_Bar>().IncrementHealth(amount);
+            m_playerUI.GetComponentInChildren<Health_Bar>().IncrementHealth(amount);
         }
 
         m_currentHealth += amount;

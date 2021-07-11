@@ -8,6 +8,8 @@ TagManager:
   - Guard Ship
   - Player Bullet
   - Enemy Bullet
+  - Asteroid
+  - Collectable
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - UI
   - Player
   - Enemy
-  - 
+  - Mother Ship
   - 
   - 
   - 
