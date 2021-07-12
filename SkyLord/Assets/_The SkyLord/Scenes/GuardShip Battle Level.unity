@@ -852,6 +852,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_explosionPrefab: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
+  m_impactRadius: 100
+  m_impactForce: 300
 --- !u!1 &168552319
 GameObject:
   m_ObjectHideFlags: 0
@@ -1504,6 +1506,9 @@ MonoBehaviour:
   m_enemyController: {fileID: 780713525}
   m_enemyProjectile: {fileID: 112339887406800560, guid: cc172fda65a415a4eaeb5b5a797f700d, type: 3}
   m_Projectile_Quantity: 4
+  m_layerMask:
+    serializedVersion: 2
+    m_Bits: 447
 --- !u!1 &287831179
 GameObject:
   m_ObjectHideFlags: 0
@@ -1551,6 +1556,9 @@ MonoBehaviour:
   m_enemyController: {fileID: 2100149523}
   m_enemyProjectile: {fileID: 112339887406800560, guid: cc172fda65a415a4eaeb5b5a797f700d, type: 3}
   m_Projectile_Quantity: 4
+  m_layerMask:
+    serializedVersion: 2
+    m_Bits: 447
 --- !u!1 &310550401
 GameObject:
   m_ObjectHideFlags: 0
@@ -1679,6 +1687,9 @@ MonoBehaviour:
   m_enemyController: {fileID: 1692335366}
   m_enemyProjectile: {fileID: 112339887406800560, guid: cc172fda65a415a4eaeb5b5a797f700d, type: 3}
   m_Projectile_Quantity: 4
+  m_layerMask:
+    serializedVersion: 2
+    m_Bits: 447
 --- !u!1 &340929085
 GameObject:
   m_ObjectHideFlags: 0
@@ -6612,6 +6623,9 @@ MonoBehaviour:
   m_enemyController: {fileID: 5524196086383395679}
   m_enemyProjectile: {fileID: 112339887406800560, guid: bded27897188c6d41ad83d371ee73d6c, type: 3}
   m_Projectile_Quantity: 6
+  m_layerMask:
+    serializedVersion: 2
+    m_Bits: 447
 --- !u!1 &392342569
 GameObject:
   m_ObjectHideFlags: 0
@@ -27880,6 +27894,9 @@ MonoBehaviour:
   m_enemyController: {fileID: 142451153}
   m_enemyProjectile: {fileID: 112339887406800560, guid: bded27897188c6d41ad83d371ee73d6c, type: 3}
   m_Projectile_Quantity: 6
+  m_layerMask:
+    serializedVersion: 2
+    m_Bits: 447
 --- !u!1 &770843269
 GameObject:
   m_ObjectHideFlags: 0
@@ -28103,6 +28120,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_explosionPrefab: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
+  m_impactRadius: 100
+  m_impactForce: 300
 --- !u!1 &783226167
 GameObject:
   m_ObjectHideFlags: 0
@@ -28274,6 +28293,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_explosionPrefab: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
+  m_impactRadius: 100
+  m_impactForce: 300
 --- !u!1 &840296044
 GameObject:
   m_ObjectHideFlags: 0
@@ -29115,6 +29136,9 @@ MonoBehaviour:
   m_enemyController: {fileID: 1194564564}
   m_enemyProjectile: {fileID: 112339887406800560, guid: cc172fda65a415a4eaeb5b5a797f700d, type: 3}
   m_Projectile_Quantity: 4
+  m_layerMask:
+    serializedVersion: 2
+    m_Bits: 447
 --- !u!1 &1040735633
 GameObject:
   m_ObjectHideFlags: 0
@@ -44259,6 +44283,9 @@ MonoBehaviour:
   m_enemyController: {fileID: 1493734882}
   m_enemyProjectile: {fileID: 112339887406800560, guid: bded27897188c6d41ad83d371ee73d6c, type: 3}
   m_Projectile_Quantity: 6
+  m_layerMask:
+    serializedVersion: 2
+    m_Bits: 447
 --- !u!1 &1160299090
 GameObject:
   m_ObjectHideFlags: 0
@@ -44543,6 +44570,9 @@ MonoBehaviour:
   m_enemyController: {fileID: 1532304133}
   m_enemyProjectile: {fileID: 112339887406800560, guid: cc172fda65a415a4eaeb5b5a797f700d, type: 3}
   m_Projectile_Quantity: 4
+  m_layerMask:
+    serializedVersion: 2
+    m_Bits: 447
 --- !u!1 &1194564563
 GameObject:
   m_ObjectHideFlags: 0
@@ -44633,6 +44663,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_explosionPrefab: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
+  m_impactRadius: 100
+  m_impactForce: 300
 --- !u!1 &1195242114
 GameObject:
   m_ObjectHideFlags: 0
@@ -50306,6 +50338,9 @@ MonoBehaviour:
   m_enemyController: {fileID: 780713525}
   m_enemyProjectile: {fileID: 112339887406800560, guid: cc172fda65a415a4eaeb5b5a797f700d, type: 3}
   m_Projectile_Quantity: 4
+  m_layerMask:
+    serializedVersion: 2
+    m_Bits: 447
 --- !u!1 &1339143381
 GameObject:
   m_ObjectHideFlags: 0
@@ -50580,6 +50615,9 @@ MonoBehaviour:
   m_enemyController: {fileID: 829000120}
   m_enemyProjectile: {fileID: 112339887406800560, guid: bded27897188c6d41ad83d371ee73d6c, type: 3}
   m_Projectile_Quantity: 6
+  m_layerMask:
+    serializedVersion: 2
+    m_Bits: 447
 --- !u!1 &1378576156
 GameObject:
   m_ObjectHideFlags: 0
@@ -51113,6 +51151,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_explosionPrefab: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
+  m_impactRadius: 100
+  m_impactForce: 300
 --- !u!1 &1530683688
 GameObject:
   m_ObjectHideFlags: 0
@@ -51278,6 +51318,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_explosionPrefab: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
+  m_impactRadius: 100
+  m_impactForce: 300
 --- !u!1 &1547527183
 GameObject:
   m_ObjectHideFlags: 0
@@ -56828,6 +56870,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_explosionPrefab: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
+  m_impactRadius: 100
+  m_impactForce: 300
 --- !u!1 &1692750601
 GameObject:
   m_ObjectHideFlags: 0
@@ -62020,6 +62064,9 @@ MonoBehaviour:
   m_enemyController: {fileID: 1692335366}
   m_enemyProjectile: {fileID: 112339887406800560, guid: cc172fda65a415a4eaeb5b5a797f700d, type: 3}
   m_Projectile_Quantity: 4
+  m_layerMask:
+    serializedVersion: 2
+    m_Bits: 447
 --- !u!1 &1780958106
 GameObject:
   m_ObjectHideFlags: 0
@@ -62067,6 +62114,9 @@ MonoBehaviour:
   m_enemyController: {fileID: 2100149523}
   m_enemyProjectile: {fileID: 112339887406800560, guid: cc172fda65a415a4eaeb5b5a797f700d, type: 3}
   m_Projectile_Quantity: 4
+  m_layerMask:
+    serializedVersion: 2
+    m_Bits: 447
 --- !u!1 &1792087412
 GameObject:
   m_ObjectHideFlags: 0
@@ -72070,6 +72120,9 @@ MonoBehaviour:
   m_enemyController: {fileID: 1532304133}
   m_enemyProjectile: {fileID: 112339887406800560, guid: cc172fda65a415a4eaeb5b5a797f700d, type: 3}
   m_Projectile_Quantity: 4
+  m_layerMask:
+    serializedVersion: 2
+    m_Bits: 447
 --- !u!1 &1938265280
 GameObject:
   m_ObjectHideFlags: 0
@@ -92372,6 +92425,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_explosionPrefab: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
+  m_impactRadius: 100
+  m_impactForce: 300
 --- !u!1 &2107643743
 GameObject:
   m_ObjectHideFlags: 0
@@ -92540,6 +92595,9 @@ MonoBehaviour:
   m_enemyController: {fileID: 1194564564}
   m_enemyProjectile: {fileID: 112339887406800560, guid: cc172fda65a415a4eaeb5b5a797f700d, type: 3}
   m_Projectile_Quantity: 4
+  m_layerMask:
+    serializedVersion: 2
+    m_Bits: 447
 --- !u!1 &2118146730
 GameObject:
   m_ObjectHideFlags: 0
@@ -119344,6 +119402,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_explosionPrefab: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
+  m_impactRadius: 100
+  m_impactForce: 300
 --- !u!1 &5524722502118141846
 GameObject:
   m_ObjectHideFlags: 0

@@ -41,6 +41,7 @@ public class Enemy_Controller : MonoBehaviour
         if (m_currentHealth <= 0f)
         {
             gameObject.GetComponent<Explosion_Effect>().Explode();
+            gameObject.GetComponent<Explosion_Effect>().AddNearbyForce();
             m_enemyManager.m_playerTransform.gameObject.GetComponent<Oblivion_Damage_And_Health>().m_playerUI.GetComponentInChildren<Increment_Count_Text>().IncrementCount();
             m_enemyManager.RemoveShip(this.gameObject);
         }

@@ -55,7 +55,7 @@ public class Laser_Fire : MonoBehaviour
 
     void DamagePlayer()
     {
-        m_playerShip.GetComponent<Oblivion_Damage_And_Health>().m_damageAmount = 0.5f;
+        m_playerShip.GetComponent<Oblivion_Damage_And_Health>().m_damageAmount = 0.2f;
         m_playerShip.GetComponent<Oblivion_Damage_And_Health>().m_takenDamage = true;
         m_playerShip.GetComponent<Oblivion_Damage_And_Health>().m_isVulnerable = true;
         m_playerShip.GetComponent<Oblivion_Damage_And_Health>().DoDamage();

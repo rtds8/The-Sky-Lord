@@ -18,7 +18,7 @@ public class MotherShip_Disappear : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if(m_elapsedTime > m_spawnTime)
+        if(m_elapsedTime > m_spawnTime && m_dropShipsSpawned < 5)
         {
             m_spawnTime += m_spawnTime;
             GameObject dropShip = animator.GetComponent<MotherShip_Manager>().GetDropShip() as GameObject;
@@ -26,7 +26,7 @@ public class MotherShip_Disappear : StateMachineBehaviour
             m_dropShipsSpawned += 1;
         }
 
-        if(m_elapsedTime >= m_disappearTime)
+        if(m_elapsedTime >= m_disappearTime && m_dropShipsSpawned < 5)
         {
             animator.SetTrigger("Disappear");
         }

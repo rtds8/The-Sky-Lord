@@ -48,7 +48,7 @@ public class Move_Projectile : MonoBehaviour
     void DestroyProjectile()
     {
         Vector3 currentPos = transform.position;
-        if (Vector3.Distance(m_startPoint, currentPos) >= 300f && this.gameObject.activeInHierarchy)
+        if (Vector3.Distance(m_startPoint, currentPos) >= 500f && this.gameObject.activeInHierarchy)
             Destroy(gameObject);
     }
 

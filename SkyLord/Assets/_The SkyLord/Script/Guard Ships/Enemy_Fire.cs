@@ -9,8 +9,14 @@ public class Enemy_Fire : MonoBehaviour
     [SerializeField] private GameObject m_enemyProjectile;
     [SerializeField] private int m_Projectile_Quantity = 4;
     private float m_elapsedTIme = 0f;
+    [SerializeField] private LayerMask m_layerMask;
 
     List<GameObject> Enemy_Projectile_Pool;
+
+    private void Awake()
+    {
+        m_layerMask = gameObject.layer;
+    }
 
     void Start()
     {
@@ -24,7 +30,7 @@ public class Enemy_Fire : MonoBehaviour
             objEnemyProjectile.transform.parent = this.transform;
         }
     }
-    void Update()
+    void FixedUpdate()
     {
         if(m_enemyController.m_doFire == true)
         {
@@ -52,18 +58,19 @@ public class Enemy_Fire : MonoBehaviour
 
     public bool AimAtPlayer()
     {
-        RaycastHit hit;
         Vector3 direction = m_enemyManager.m_playerTransform.position - this.transform.parent.parent.forward;
         
-        if (Physics.Raycast(this.transform.position, direction, out hit, m_enemyController.m_minDistanceForFire))
+        if (Physics.Raycast(this.transform.position, direction, m_enemyController.m_minDistanceForFire, m_layerMask))
         {
             return true;
         }
 
         else
         {
-            if (Physics.Raycast(this.transform.parent.parent.position, direction, out hit, m_enemyController.m_minDistanceForFire))
+            if (Physics.Raycast(this.transform.parent.parent.position, direction, m_enemyController.m_minDistanceForFire, m_layerMask))
+            {
                 return true;
+            }
         }
 
         return false;

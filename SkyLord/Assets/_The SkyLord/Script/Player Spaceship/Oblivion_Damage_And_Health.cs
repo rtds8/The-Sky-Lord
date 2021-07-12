@@ -34,7 +34,7 @@ public class Oblivion_Damage_And_Health : MonoBehaviour
         if (m_mainController.m_inputController.m_doFire)
             m_playerUI.GetComponentInChildren<Energy_Bar>().ReduceEnergy(m_energyReduceAmount * 20f * Time.deltaTime);
 
-        m_playerUI.GetComponentInChildren<Energy_Bar>().ReduceEnergy(m_energyReduceAmount * 5f * Time.deltaTime);
+        m_playerUI.GetComponentInChildren<Energy_Bar>().ReduceEnergy(m_energyReduceAmount * Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -76,7 +76,7 @@ public class Oblivion_Damage_And_Health : MonoBehaviour
 
         var amount = 50f;
 
-        if (m_currentHealth < 450f)
+        if (m_currentHealth < m_mainController.m_health - amount)
         {/*
             if (m_currentHealth > 50f)
                 amount = Mathf.Round(m_currentHealth * 0.2f);

@@ -24,7 +24,12 @@ public class DropShip_Damage : MonoBehaviour
     void Update()
     {
         if (m_currentHealth <= 0f)
+        {
+            gameObject.GetComponent<Explosion_Effect>().Explode();
+            gameObject.GetComponent<Explosion_Effect>().AddNearbyForce();
+            gameObject.GetComponent<DropShip_Movement>().m_playeShipTransform.gameObject.GetComponent<Oblivion_Damage_And_Health>().m_playerUI.GetComponentInChildren<Increment_Count_Text>().IncrementCount();
             this.gameObject.SetActive(false);
+        }
     }
 
     void OnTriggerEnter(Collider other)

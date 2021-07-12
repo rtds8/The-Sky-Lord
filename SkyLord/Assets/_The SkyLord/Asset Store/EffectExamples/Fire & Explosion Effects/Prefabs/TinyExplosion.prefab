@@ -4885,6 +4885,7 @@ GameObject:
   - component: {fileID: 4441266138185142}
   - component: {fileID: 198175801688348628}
   - component: {fileID: 199922078765427110}
+  - component: {fileID: -4460010039421857764}
   m_Layer: 0
   m_Name: TinyExplosion
   m_TagString: Untagged
@@ -4900,8 +4901,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1337198075554910}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.2346153, y: 2.42, z: -21.91896}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 7, y: 7, z: 7}
   m_Children:
   - {fileID: 4683521235247790}
   - {fileID: 4487629475653210}
@@ -9786,6 +9787,18 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &-4460010039421857764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337198075554910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d568e9d3f5bb0334da436ad253431314, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1793989332680384
 GameObject:
   m_ObjectHideFlags: 0

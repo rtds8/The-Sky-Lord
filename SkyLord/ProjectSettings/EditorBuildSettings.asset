@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_The SkyLord/Scenes/Asteroid Belt level.unity
     guid: 57229befc42f1d64389054ca5a6267bc
+  - enabled: 1
+    path: Assets/_The SkyLord/Scenes/MotherShip Battle Level.unity
+    guid: 2a557a71353525240a8bcc3a37d669aa
   m_configObjects: {}
