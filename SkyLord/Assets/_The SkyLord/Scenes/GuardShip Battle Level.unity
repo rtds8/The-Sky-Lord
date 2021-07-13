@@ -97688,7 +97688,7 @@ MonoBehaviour:
   m_rotationSpeed: 15
   m_health: 500
   m_healTime: 20
-  m_maxEnergy: 1000
+  m_maxEnergy: 2000
   m_energyIncrement: 150
   m_inputController: {fileID: 1040203329226138}
   m_movementController: {fileID: 1040203329226136}

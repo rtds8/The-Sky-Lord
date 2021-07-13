@@ -733,7 +733,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_playerShip: {fileID: 1027361121}
   m_motherShipSpeed: 500
-  m_health: 1000
+  m_health: 1500
   m_healRate: 5
   m_shieldEnergy: 5
   m_jumpLocations:
@@ -51624,7 +51624,7 @@ MonoBehaviour:
   m_rotationSpeed: 15
   m_health: 1500
   m_healTime: 5
-  m_maxEnergy: 1000
+  m_maxEnergy: 3000
   m_energyIncrement: 200
   m_inputController: {fileID: 1027361126}
   m_movementController: {fileID: 1027361125}
@@ -152058,7 +152058,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2013528663}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 17376740be9306843850ab14ecba0ab6, type: 3}
